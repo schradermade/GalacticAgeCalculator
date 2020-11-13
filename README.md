@@ -44,8 +44,12 @@ expect(venusStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life 
 4.
 Describe: marsAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Mars years"
-expect(marsStats.venus()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
+expect(marsStats.mars()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
 
+5.
+Describe: jupiterAge
+Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Jupiter years"
+expect(jupiterStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9")
 
 ## Known Bugs
 
