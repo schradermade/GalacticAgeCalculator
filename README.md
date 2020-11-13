@@ -34,27 +34,28 @@ Expect(userInput("100")).toEqual("100")
 2.
 Describe: mercuryAge
 Test: "should correctly 1. users age 2. user life expectancy 3. years left, all refactored in Mercury years"
-expect(mercuryStats.mercury()).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Years left to live - 15.6")
+expect(mercuryStats.mercury(35, 100)).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Years left to live - 15.6")
 
 3.
 Describe: venusAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Venus years"
-expect(venusStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3")
+expect(venusStats.venus(35, 100)).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3")
 
 4.
 Describe: marsAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Mars years"
-expect(marsStats.mars()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
+expect(marsStats.mars(35, 100)).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
 
 5.
 Describe: jupiterAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Jupiter years"
-expect(jupiterStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9")
+expect(jupiterStats.jupiter(35, 100)).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9")
 
 6.
-Describe: expectYears
+Describe: yearsDynamic
 Test: "should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life"
-expect(yearsDynamic.expectYears()).toEqual("Years left to live - 65")
+expect(yearsLeft.yearsDynamic(35, 100)).toEqual("Years left to live - 65")
+expect(yearsLeft.yearsDynamic(155, 100)).toEqual("You have outlived your life expectancy by 55 years!)
 
 ## Known Bugs
 

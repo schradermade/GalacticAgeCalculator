@@ -29,8 +29,10 @@ describe('Age', () => {
   });
 
   test('should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life', () => {
-    let yearsDynamic = new Age(35, 100);
-    expect(yearsDynamic.expectYears()).toEqual("Years left to live - 65");
+    let yearsLeft = new Age(35, 100);
+    expect(yearsLeft.yearsDynamic()).toEqual("You have about 65 years left!");
+    let yearsLeft2 = new Age(155, 100);
+    expect(yearsLeft2.yearsDynamic()).toEqual("You have outlived your life expectancy by 55 years!")
   });
 });
 
