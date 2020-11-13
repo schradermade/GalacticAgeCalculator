@@ -1,24 +1,20 @@
-# _Mr. Roboger's Neighborhood_
+# _Super Galactic Age Calculator_
 
-#### _Web form to transform user's inputted number, 10.30.2020_
+#### _Web form to calculate user age on different planets, 11.13.2020_
 
 #### By _**Nathan Schrader**_
 
 ## Description
 
-_This web application will take a number from a user and return a range of numbers from 0 to the user inputted number with the following exceptions:_
-    *   Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
-    *   Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
-    *   Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"
+_A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. This application will determine a user's age based on a planet's solar years._
+    *  A Mercury year is .24 Earth years, therefore a 35 year old would be "8.4 Mercury years"
+    *   A Venus year is .62 Earth years, therefore a 35 year old would be "21.7 Venus years"
+    *   A Mars year is .1.88 Earth years, therefore a 35 year old would be "65.8 mars years"
+    *   A Jupiter year is 11.86 Earth years, therefore a 35 year old would be "415.1 Jupiter years"
     
-These exceptions are written from least to most important. The first exception should apply unless the second exception does, and the same with the second and third. So, for example:
-    *   The number 13 should be replaced with "Won't you be my neighbor?"
-    *   The number 21 should be replaced with "Boop"
-    *   The number 32 should be replaced with "Won't you be my neighbor?"
-    
-A user should be able to enter a new number and see new reults over and over again.
+Application also determines how many years a user has left to live on each planet, based on a set "user life expectancy". Therefore, for each different planet a user will be returned with both their "planet" age as well las how many years more they are expected to live.
 
-**Example:** if a user inputs a inputs a **5**, the program should display a list of values: **"0", "Beep!", "Boop", "Won't you be my neighbor?", 4, 5** 
+**Example:** if a user inputs a inputs an Earth-age of **35**, and the user wants to know their age data for Mars, the program should display 2 values: **"65.8 Mars age", and "34.2 expected years remaining"** 
 
 ## Setup/Installation Requirements
 
@@ -31,8 +27,8 @@ A user should be able to enter a new number and see new reults over and over aga
 
 1.
 Describe: userInput
-Test: "Takes in user input, converts to integer and stores it in a variable"
-Expect(userInput("5")).toEqual([5])
+Test: "Takes in user age and their desired life expectancy"
+Expect(userInput("35")).toEqual("35")
 
 2.
 Describe: createArray
