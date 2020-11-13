@@ -3,6 +3,17 @@ export class Age  {
   constructor(earthAge, lifeExp)  {
     this.earthAge = parseInt(earthAge);
     this.lifeExp = parseInt(lifeExp);
+    this.yearsLeft = this.yearsDynamic();
+  }
+
+  yearsDynamic() {
+    if (this.earthAge <= this.lifeExp) {
+      this.yearsLeft = `You have about ${this.lifeExp - this.earthAge} years left!`;
+      return this.yearsLeft;
+    } else  {
+      this.yearsLeft = `You have outlived your life expectancy by ${this.earthAge - this.lifeExp} years!`;
+      return this.yearsLeft;
+    };
   }
 
   mercury()  {
@@ -10,8 +21,7 @@ export class Age  {
     this.expRefactor = this.lifeExp * .24;
     this.mercuryAge = this.ageRefactor;
     this.mercuryExp = this.expRefactor;
-    this.yearsLeft = this.expRefactor - this.ageRefactor;
-    return `Your Mercury stats: Age - ${this.mercuryAge}, Expected life - ${this.mercuryExp}, Years left to live - ${this.yearsLeft}`;
+    return `Your Mercury stats: Age - ${this.mercuryAge}, Expected life - ${this.mercuryExp}, ${this.yearsLeft}`;
   }
 
   venus()  {
@@ -20,7 +30,7 @@ export class Age  {
     this.venusAge = this.ageRefactor;
     this.venusExp = this.expRefactor;
     this.yearsLeft = this.expRefactor - this.ageRefactor;
-    return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, Years left to live - ${this.yearsLeft}`;
+    return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, ${this.yearsLeft}`;
   }
 
   mars()  {
@@ -29,7 +39,7 @@ export class Age  {
     this.marsAge = this.ageRefactor;
     this.marsExp = this.expRefactor;
     this.yearsLeft = this.expRefactor - this.ageRefactor;
-    return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, Years left to live - ${this.yearsLeft}`;
+    return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, ${this.yearsLeft}`;
   }
 
   jupiter()  {
@@ -38,7 +48,7 @@ export class Age  {
     this.jupiterAge = this.ageRefactor;
     this.jupiterExp = this.expRefactor;
     this.yearsLeft = (this.expRefactor - this.ageRefactor).toFixed(1);
-    return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, Years left to live - ${this.yearsLeft}`;
+    return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, ${this.yearsLeft}`;
   }
 };
 
@@ -59,4 +69,8 @@ Fruit.prototype.displayFlavors = function() {
   let response = `The flavors you chose are ${this.flavor1}, ${this.flavor2}, and ${this.flavor3}.`;
   return response;
 }
+
+
+
+"You have exceeded your life expectancy by `${this.yearsLeft}`"
 */
