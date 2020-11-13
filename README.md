@@ -46,7 +46,8 @@ expect(reusableStats2.venus()).toEqual("Your Venus stats: Age - 62, Expected lif
 4.
 Describe: marsAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Mars years"
-expect(marsStats.mars(35, 100)).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
+expect(reusableStats.mars()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Your remaining life is about 122.2 years!");
+expect(reusableStats2.mars()).toEqual("Your Mars stats: Age - 188, Expected life - 65.8, You have outlived your life expectancy by 122.2 years!");
 
 5.
 Describe: jupiterAge
