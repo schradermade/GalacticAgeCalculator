@@ -51,6 +51,11 @@ Describe: jupiterAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Jupiter years"
 expect(jupiterStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9")
 
+6.
+Describe: expectYears
+Test: "should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life"
+expect(yearsDynamic.expectYears()).toEqual("Years left to live - 65")
+
 ## Known Bugs
 
 No known bugs at this time.

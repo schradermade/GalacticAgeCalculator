@@ -27,6 +27,11 @@ describe('Age', () => {
     let jupiterStats = new Age(35, 100);
     expect(jupiterStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9");
   });
+
+  test('should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life', () => {
+    let yearsDynamic = new Age(35, 100);
+    expect(yearsDynamic.expectYears()).toEqual("Years left to live - 65");
+  });
 });
 
 
