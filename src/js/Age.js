@@ -33,7 +33,8 @@ export class Age  {
     this.expRefactor = this.lifeExp * this.factor;
     this.venusAge = this.ageRefactor;
     this.venusExp = this.expRefactor;
-    return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, ${this.yearsLeft}`;
+    this.venusAbs = Math.abs(this.venusExp - this.venusAge);
+    return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, ${this.yearsLeft} ${this.venusAbs} years!`;
   }
 
   mars()  {
