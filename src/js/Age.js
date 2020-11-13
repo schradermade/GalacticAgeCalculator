@@ -4,32 +4,35 @@ export class Age  {
     this.earthAge = parseInt(earthAge);
     this.lifeExp = parseInt(lifeExp);
     this.yearsLeft = this.yearsDynamic();
+    this.factor = 0;
   }
 
   yearsDynamic() {
     if (this.earthAge <= this.lifeExp) {
-      this.yearsLeft = `You have about ${this.lifeExp - this.earthAge} years left!`;
+      this.yearsLeft = `Your remaining life is about`;
       return this.yearsLeft;
     } else  {
-      this.yearsLeft = `You have outlived your life expectancy by ${this.earthAge - this.lifeExp} years!`;
+      this.yearsLeft = `You have outlived your life expectancy by`;
       return this.yearsLeft;
     };
   }
 
   mercury()  {
-    this.ageRefactor = this.earthAge * .24;
-    this.expRefactor = this.lifeExp * .24;
+    this.factor = .24;
+    this.ageRefactor = this.earthAge * this.factor;
+    this.expRefactor = this.lifeExp * this.factor;
     this.mercuryAge = this.ageRefactor;
     this.mercuryExp = this.expRefactor;
-    return `Your Mercury stats: Age - ${this.mercuryAge}, Expected life - ${this.mercuryExp}, ${this.yearsLeft}`;
+    this.mercuryAbs = Math.abs(this.mercuryExp - this.mercuryAge);
+    return `Your Mercury stats: Age - ${this.mercuryAge}, Expected life - ${this.mercuryExp}, ${this.yearsLeft} ${this.mercuryAbs} years!`;
   }
 
   venus()  {
-    this.ageRefactor = this.earthAge * .62;
-    this.expRefactor = this.lifeExp * .62;
+    this.factor = .62;
+    this.ageRefactor = this.earthAge * this.factor;
+    this.expRefactor = this.lifeExp * this.factor;
     this.venusAge = this.ageRefactor;
     this.venusExp = this.expRefactor;
-    this.yearsLeft = this.expRefactor - this.ageRefactor;
     return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, ${this.yearsLeft}`;
   }
 
@@ -38,7 +41,6 @@ export class Age  {
     this.expRefactor = this.lifeExp * 1.88;
     this.marsAge = this.ageRefactor;
     this.marsExp = this.expRefactor;
-    this.yearsLeft = this.expRefactor - this.ageRefactor;
     return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, ${this.yearsLeft}`;
   }
 
@@ -47,7 +49,6 @@ export class Age  {
     this.expRefactor = (this.lifeExp * 11.86).toFixed();
     this.jupiterAge = this.ageRefactor;
     this.jupiterExp = this.expRefactor;
-    this.yearsLeft = (this.expRefactor - this.ageRefactor).toFixed(1);
     return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, ${this.yearsLeft}`;
   }
 };
