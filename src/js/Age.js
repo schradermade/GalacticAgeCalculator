@@ -33,11 +33,11 @@ export class Age  {
   }
 
   jupiter()  {
-    //this.ageRefactor = this.earthAge * 1.88;
-    //this.expRefactor = this.lifeExp * 1.88;
-    //this.jupiterAge = this.ageRefactor;
-    //this.jupiterExp = this.expRefactor;
-    //this.yearsLeft = this.expRefactor - this.ageRefactor;
+    this.ageRefactor = (this.earthAge * 11.86).toFixed(1);
+    this.expRefactor = (this.lifeExp * 11.86).toFixed();
+    this.jupiterAge = this.ageRefactor;
+    this.jupiterExp = this.expRefactor;
+    this.yearsLeft = (this.expRefactor - this.ageRefactor).toFixed(1);
     return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, Years left to live - ${this.yearsLeft}`;
   }
 };
