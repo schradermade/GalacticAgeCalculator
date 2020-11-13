@@ -33,14 +33,15 @@ Expect(userInput("100")).toEqual("100")
 
 2.
 Describe: mercuryAge
-Test: "should correctly 1. users age 2. user life expectancy 3. years left, all refactored in Mercury years"
+Test: "should correctly output 1. users age 2. user life expectancy 3. years left; all refactored in Mercury years"
 expect(reusableStats.mercury()).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Your remaining life is about 15.6 years!");
 expect(reusableStats2.mercury()).toEqual("Your Mercury stats: Age - 24, Expected life - 8.4, You have outlived your life expectancy by 15.6 years!");
 
 3.
 Describe: venusAge
-Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Venus years"
-expect(venusStats.venus(35, 100)).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3")
+Test: "should correctly output: 1. users age 2. user life expectancy 3. years left; all refactored in Venus years"
+expect(reusableStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Your remaining life is about 40.3 years!");
+expect(reusableStats2.venus()).toEqual("Your Venus stats: Age - 62, Expected life - 21.7, You have outlived your life expectancy by 40.3 years!");
 
 4.
 Describe: marsAge
