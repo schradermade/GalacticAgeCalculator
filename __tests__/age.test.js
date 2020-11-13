@@ -17,7 +17,11 @@ describe('Age', () => {
     let venusStats = new Age(35, 100);
     expect(venusStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3");
   });
-  
+
+  test('should correctly output: 1. users age 2. user life expectancy 3. years left, all refactored in Mars years', () => {
+    let marsStats = new Age(35, 100);
+    expect(marsStats.venus()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2");
+  });
 });
 
 

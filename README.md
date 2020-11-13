@@ -42,9 +42,9 @@ Test: "should correctly output: 1. users age 2. user life expectancy years left,
 expect(venusStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3")
 
 4.
-Describe: transformString
-Test: "Transforms string based on instructed logic given in Project guidelines"
-Expect(transformString(["0", "1", "2", "3", "4", "5"])).toEqual(["0", "Beep!", "Boop!", "Won't you be my neighbor?", "4", "5"])
+Describe: marsAge
+Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Mars years"
+expect(marsStats.venus()).toEqual("Your Mars stats: Age - 65.8, Expected life - 188, Years left to live - 122.2")
 
 
 ## Known Bugs
