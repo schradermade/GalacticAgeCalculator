@@ -24,12 +24,21 @@ export class Age  {
   }
 
   mars()  {
-    //this.ageRefactor = this.earthAge * .62;
-    //this.expRefactor = this.lifeExp * .62;
-    //this.venusAge = this.ageRefactor;
-    //this.venusExp = this.expRefactor;
+    this.ageRefactor = this.earthAge * 1.88;
+    this.expRefactor = this.lifeExp * 1.88;
+    this.marsAge = this.ageRefactor;
+    this.marsExp = this.expRefactor;
+    this.yearsLeft = this.expRefactor - this.ageRefactor;
+    return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, Years left to live - ${this.yearsLeft}`;
+  }
+
+  jupiter()  {
+    //this.ageRefactor = this.earthAge * 1.88;
+    //this.expRefactor = this.lifeExp * 1.88;
+    //this.jupiterAge = this.ageRefactor;
+    //this.jupiterExp = this.expRefactor;
     //this.yearsLeft = this.expRefactor - this.ageRefactor;
-    //return `Your Venus stats: Age - ${this.venusAge}, Expected life - ${this.venusExp}, Years left to live - ${this.yearsLeft}`;
+    return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, Years left to live - ${this.yearsLeft}`;
   }
 };
 
