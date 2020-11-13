@@ -32,8 +32,8 @@ describe('Age', () => {
   });
 
   test('should correctly output: 1. users age 2. user life expectancy 3. years left, all refactored in Jupiter years', () => {
-    let jupiterStats = new Age(35, 100);
-    expect(jupiterStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9");
+    expect(reusableStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Your remaining life is about 770.9 years!");
+    expect(reusableStats2.jupiter()).toEqual("Your Jupiter stats: Age - 1186, Expected life - 415.1, You have outlived your life expectancy by 770.9 years!");
   });
 
   test('should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life', () => {

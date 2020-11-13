@@ -52,7 +52,8 @@ expect(reusableStats2.mars()).toEqual("Your Mars stats: Age - 188, Expected life
 5.
 Describe: jupiterAge
 Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Jupiter years"
-expect(jupiterStats.jupiter(35, 100)).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Years left to live - 770.9")
+expect(reusableStats.jupiter()).toEqual("Your Jupiter stats: Age - 415.1, Expected life - 1186, Your remaining life is about 770.9 years!");
+expect(reusableStats2.jupiter()).toEqual("Your Jupiter stats: Age - 1186, Expected life - 415.1, You have outlived your life expectancy by 770.9 years!");
 
 6.
 Describe: yearsDynamic
