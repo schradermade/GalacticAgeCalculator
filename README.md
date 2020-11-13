@@ -34,7 +34,8 @@ Expect(userInput("100")).toEqual("100")
 2.
 Describe: mercuryAge
 Test: "should correctly 1. users age 2. user life expectancy 3. years left, all refactored in Mercury years"
-expect(mercuryStats.mercury(35, 100)).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Years left to live - 15.6")
+expect(reusableStats.mercury()).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Your remaining life is about 15.6 years!");
+expect(reusableStats2.mercury()).toEqual("Your Mercury stats: Age - 24, Expected life - 8.4, You have outlived your life expectancy by 15.6 years!");
 
 3.
 Describe: venusAge
