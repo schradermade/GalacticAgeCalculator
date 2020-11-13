@@ -33,14 +33,13 @@ Expect(userInput("100")).toEqual("100")
 
 2.
 Describe: mercuryAge
-Test: "should correctly output users age and expected years left to live, refactored in Mercury years"
-Expect(userInput("35")).toEqual("8.4")
-Expect(userInput("100")).toEqual("24")
+Test: "should correctly 1. users age 2. user life expectancy 3. years left, all refactored in Mercury years"
+expect(mercuryStats.mercury()).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Years left to live - 15.6")
 
 3.
-Describe: createString
-Test: "Takes array of integers and converts them to an array of strings"
-Expect(createString([0, 1, 2, 3, 4, 5])).toEqual(["0", "1", "2", "3", "4", "5"])
+Describe: venusAge
+Test: "should correctly output: 1. users age 2. user life expectancy years left, all refactored in Venus years"
+expect(venusStats.venus()).toEqual("Your Venus stats: Age - 21.7, Expected life - 62, Years left to live - 40.3")
 
 4.
 Describe: transformString

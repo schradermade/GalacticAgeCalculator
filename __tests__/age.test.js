@@ -8,11 +8,15 @@ describe('Age', () => {
     expect(userAge.lifeExp).toEqual(100);
   });
 
-  test('should correctly output users age and expected years left to live, refactored in Mercury years', () => {
+  test('should correctly output: 1. users age 2. user life expectancy 3. years left, all refactored in Mercury years', () => {
     let mercuryStats = new Age(35, 100);
     expect(mercuryStats.mercury()).toEqual("Your Mercury stats: Age - 8.4, Expected life - 24, Years left to live - 15.6");
   });
 
+  test('should correctly output: 1. users age 2. user life expectancy 3. years left, all refactored in Venus years', () => {
+    let venusStats = new Age(35, 100);
+    expect(venusStats.venus()).toEqual("Your Venus stats: Age - 8.4, Expected life - 24, Years left to live - 15.6");
+  });
 });
 
 
