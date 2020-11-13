@@ -38,11 +38,13 @@ export class Age  {
   }
 
   mars()  {
-    this.ageRefactor = this.earthAge * 1.88;
-    this.expRefactor = this.lifeExp * 1.88;
+    this.factor = 1.88
+    this.ageRefactor = this.earthAge * this.factor;
+    this.expRefactor = this.lifeExp * this.factor;
     this.marsAge = this.ageRefactor;
     this.marsExp = this.expRefactor;
-    return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, ${this.yearsLeft}`;
+    this.marsAbs = Math.abs(this.marsExp - this.marsAge);
+    return `Your Mars stats: Age - ${this.marsAge}, Expected life - ${this.marsExp}, ${this.yearsLeft} ${this.marsAbs} years!`;
   }
 
   jupiter()  {
