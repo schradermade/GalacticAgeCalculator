@@ -26,14 +26,16 @@ Application also determines how many years a user has left to live on each plane
 ## Specs
 
 1.
-Describe: userInput
+Describe: userAge
 Test: "should correctly take in user age and desired life expectancy"
 Expect(userInput("35")).toEqual("35")
+Expect(userInput("100")).toEqual("100")
 
 2.
-Describe: createArray
-Test: "Creates an array of integers ranging from 0 to the user's inputed integer"
-Expect(createArray("5")).toEqual([0, 1, 2, 3, 4, 5]);
+Describe: mercuryAge
+Test: "should correctly output users age and expected years left to live, refactored in Mercury years"
+Expect(userInput("35")).toEqual("8.4")
+Expect(userInput("100")).toEqual("24")
 
 3.
 Describe: createString
