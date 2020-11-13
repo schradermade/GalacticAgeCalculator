@@ -27,7 +27,7 @@ Application also determines how many years a user has left to live on each plane
 
 1.
 Describe: userInput
-Test: "Takes in user age and their desired life expectancy"
+Test: "should correctly take in user age and desired life expectancy"
 Expect(userInput("35")).toEqual("35")
 
 2.
