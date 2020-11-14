@@ -48,7 +48,7 @@ _If you run into any issues or have concerns, please reach out at **nathanschrad
 
 ## Technologies Used
 
-**
+
 * HTML
 * CSS
 * Bootstrap
@@ -56,7 +56,7 @@ _If you run into any issues or have concerns, please reach out at **nathanschrad
 * Test Driven Development
 * Visual Studio Code
 * Github
-**
+
 
 ## Legal
 
