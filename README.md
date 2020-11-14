@@ -1,27 +1,27 @@
 # _Super Galactic Age Calculator_
 
-#### _Web form to calculate user age on different planets, 11.13.2020_
+#### _Web form to accept user's Earth Age and Life Expectancy, and output users age stats for a given planet, 11.13.2020_
 
 #### By _**Nathan Schrader**_
 
 ## Description
 
 _A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. This application will determine a user's age based on a planet's solar years._
-    *  A Mercury year is .24 Earth years, therefore a 35 year old would be "8.4 Mercury years"
+
+    *   A Mercury year is .24 Earth years, therefore a 35 year old would be "8.4 Mercury years"
     *   A Venus year is .62 Earth years, therefore a 35 year old would be "21.7 Venus years"
     *   A Mars year is .1.88 Earth years, therefore a 35 year old would be "65.8 mars years"
     *   A Jupiter year is 11.86 Earth years, therefore a 35 year old would be "415.1 Jupiter years"
     
 Application also determines how many years a user has left to live on each planet, based on a set "user life expectancy". Therefore, for each different planet a user will be returned with both their "planet" age as well las how many years more they are expected to live.
 
-**Example:** if a user inputs a inputs an Earth-age of **35**, and the user wants to know their age data for Mars, the program should display 2 values: **"65.8 Mars age", and "34.2 expected years remaining"** 
+**Example:** If a user inputs a inputs an _Earth Age_:**35** and _Life Expectancy_:**100** and the user wants to know their age data for Mars, the program should display 3 values: **"65.8 Mars age", "188 year life expectancy" and "122.2 expected years remaining"** 
 
 ## Setup/Installation Requirements
 
 * _Clone this repository_
-* _Open a simple HTTP server in the top level of the cloned directory. For a mac, run the following commanad in your terminal:_
-    `python -m SimpleHTTPServer`
-* _Then open your web browser of choice to localhost:8800_
+* In your Terminal navigate to the root directy where the cloned project exists and install webpack by typing:
+    `npm install`
 
 ## Specs
 
@@ -59,11 +59,12 @@ expect(reusableStats2.jupiter()).toEqual("Your Jupiter stats: Age - 1186, Expect
 Describe: yearsDynamic
 Test: "should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life"
 expect(yearsLeft.yearsDynamic(35, 100)).toEqual("Years left to live - 65")
-expect(yearsLeft.yearsDynamic(155, 100)).toEqual("You have outlived your life expectancy by 55 years!)
+expect(reusableStats.yearsDynamic()).toEqual("Your remaining life is about")
+expect(reusableStats2.yearsDynamic()).toEqual("You have outlived your life expectancy by");
 
 ## Known Bugs
 
-No known bugs at this time.
+No known bugs at this time. If you find a bug, let me know via email!
 
 ## Support and contact details
 
@@ -71,13 +72,15 @@ _If you run into any issues or have concerns, please reach out at **nathanschrad
 
 ## Technologies Used
 
-**HTML
-CSS
-Bootstrap
-JavaScript
-jQuery
-Visual Studio Code
-Github**
+**
+* HTML
+* CSS
+* Bootstrap
+* JavaScript - ES6
+* Test Driven Development
+* Visual Studio Code
+* Github
+**
 
 ## Legal
 
