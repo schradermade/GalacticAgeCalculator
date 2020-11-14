@@ -8,14 +8,14 @@
 
 _A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. This application will determine a user's age based on a planet's solar years._
 
-    *   A Mercury year is .24 Earth years, therefore a 35 year old would be "8.4 Mercury years"
-    *   A Venus year is .62 Earth years, therefore a 35 year old would be "21.7 Venus years"
-    *   A Mars year is .1.88 Earth years, therefore a 35 year old would be "65.8 mars years"
-    *   A Jupiter year is 11.86 Earth years, therefore a 35 year old would be "415.1 Jupiter years"
+* A Mercury year is .24 Earth years, therefore a 35 year old would be "8.4 Mercury years"
+* A Venus year is .62 Earth years, therefore a 35 year old would be "21.7 Venus years"
+* A Mars year is .1.88 Earth years, therefore a 35 year old would be "65.8 mars years"
+* A Jupiter year is 11.86 Earth years, therefore a 35 year old would be "415.1 Jupiter years"
     
 Application also determines how many years a user has left to live on each planet, based on a set "user life expectancy". Therefore, for each different planet a user will be returned with both their "planet" age as well las how many years more they are expected to live.
 
-**Example:** If a user inputs a inputs an _Earth Age_:**35** and _Life Expectancy_:**100** and the user wants to know their age data for Mars, the program should display 3 values: **"65.8 Mars age", "188 year life expectancy" and "122.2 expected years remaining"** 
+**Example:** If a user inputs a inputs an **Earth Age: 35** and **Life Expectancy: 100** and the user wants to know their age data for Mars, the program should display 3 values:<br><br> **"Your Mars stats: Age - 65.8, Expected life - 188, Your remaining life is about 122.2 years!"** 
 
 ## Setup/Installation Requirements
 
@@ -24,7 +24,7 @@ Application also determines how many years a user has left to live on each plane
     `npm install`
 
 ## Spec Table
-| Test.# | Describe:     |      Test     | Expect().toEqual() |
+| Test.# | Describe     |      Test     | `expect().toEqual()` |
 |:------:| :------------ |:-------------| :---------------------------|
 | 1 | **userAge**  |_should correctly take in user "Earth Age" and desired "Life Expectancy"_ | **expect**(`userInput`("35")).`toEqual`("35")<br><br>**expect**(`userInput`("100")).`toEqual`("100") |
 |   | | | |
