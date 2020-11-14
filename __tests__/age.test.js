@@ -1,4 +1,4 @@
-import { Age } from './../src/js/age.js';
+import { Age } from './../src/js/Age.js';
 
 describe('Age', () => {
   let reusableStats;
@@ -8,7 +8,6 @@ describe('Age', () => {
     reusableStats = new Age(35, 100);
     reusableStats2 = new Age(100, 35);
   })
-
 
   test('should correctly take in user age and desired life expectancy', () => {
     let userAge = new Age(35, 100);
@@ -37,20 +36,7 @@ describe('Age', () => {
   });
 
   test('should correctly assign dynamic value to this.yearsLeft, depending on if users age is below or beyond the expected life', () => {
-    let yearsLeft = new Age(35, 100);
-    expect(yearsLeft.yearsDynamic()).toEqual("You have about 65 years left!");
-    let yearsLeft2 = new Age(155, 100);
-    expect(yearsLeft2.yearsDynamic()).toEqual("You have outlived your life expectancy by 55 years!")
+    expect(reusableStats.yearsDynamic()).toEqual("Your remaining life is about")
+    expect(reusableStats2.yearsDynamic()).toEqual("You have outlived your life expectancy by");
   });
 });
-
-
-
-/*
-  test('should correctly concatenate all 3 parameters', () => {
-    let fruit1 = new Fruit("sweet", "crisp", "clean");
-    expect(fruit1.displayFlavors()).toBe("The flavors you chose are sweet, crisp, and clean.");
-  })
-  
-
-*/

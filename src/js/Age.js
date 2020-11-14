@@ -48,33 +48,12 @@ export class Age  {
   }
 
   jupiter()  {
-    this.ageRefactor = (this.earthAge * 11.86).toFixed(1);
-    this.expRefactor = (this.lifeExp * 11.86).toFixed();
-    this.jupiterAge = this.ageRefactor;
-    this.jupiterExp = this.expRefactor;
-    return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, ${this.yearsLeft}`;
+    this.factor = 11.86;
+    this.ageRefactor = (this.earthAge * this.factor);
+    this.expRefactor = (this.lifeExp * this.factor);
+    this.jupiterAge = Math.round(10 * this.ageRefactor)/10;
+    this.jupiterExp = Math.round(10 * this.expRefactor)/10;
+    this.jupiterAbs = Math.abs(this.jupiterExp - this.jupiterAge);
+    return `Your Jupiter stats: Age - ${this.jupiterAge}, Expected life - ${this.jupiterExp}, ${this.yearsLeft} ${this.jupiterAbs} years!`;
   }
 };
-
-
-
-
-
-
-
-/*
-export function Fruit(flavor1, flavor2, flavor3) {
-  this.flavor1 = flavor1;
-  this.flavor2 = flavor2;
-  this.flavor3 = flavor3;
-}
-
-Fruit.prototype.displayFlavors = function() {
-  let response = `The flavors you chose are ${this.flavor1}, ${this.flavor2}, and ${this.flavor3}.`;
-  return response;
-}
-
-
-
-"You have exceeded your life expectancy by `${this.yearsLeft}`"
-*/
