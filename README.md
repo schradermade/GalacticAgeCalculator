@@ -17,11 +17,30 @@ Application also determines how many years a user has left to live on each plane
 
 **Example:** If a user inputs a inputs an **Earth Age: 35** and **Life Expectancy: 100** and the user wants to know their age data for Mars, the program should display 3 values:<br><br> **"Your Mars stats: Age - 65.8, Expected life - 188, Your remaining life is about 122.2 years!"** 
 
-## Setup/Installation Requirements
+## Setup/Installation
 
-* _Clone this repository_
-* In your Terminal navigate to the root directy where the cloned project exists and install webpack by typing:
+### Requirements:
+
+* Internet Browser
+* Code editor if you want to explore the code
+
+### Download:
+
+1. Download this repository by clicking the green 'Code' button and selecting "Download Zip"
+2. Unzip the file to extract files to your local drive. 
+3. In your Terminal navigate to the root directy where the project exists and install webpack by typing:
     `npm install`
+4. Open the `index.html` file in your browser.
+
+### Terminal:
+
+1. Open command terminal on local device
+2. Navigate to the directory where you want respository to save to
+3. Copy repository link by clicking on the green "Code" button and clicking 'clipboard' icon
+4. Back in the terminal, type `git clone {Repository-URL-here}`
+5. In your code editor program, open the newly created repository directory
+6. Right click on the `index.html` file and select "Copy file path"
+7. Paste the link into your web browser window
 
 ## Spec Table
 | Test.# | Describe     |      Test     | `expect().toEqual()` |
@@ -53,8 +72,10 @@ _If you run into any issues or have concerns, please reach out at **nathanschrad
 * CSS
 * Bootstrap
 * JavaScript - ES6
+* jQuery
 * Test Driven Development
 * Visual Studio Code
+* Git
 * Github
 
 
